@@ -1,14 +1,18 @@
 package com.design.patterns.creational.factory.methode;
 
+import java.util.Random;
+
 public class Client {
 
     public static void main(String[] args) {
         //non static factory new gift type ==> new subclass
         // use of override
-        GiftFactory factory = new XmasGiftFactory();
-        factory.create().unWrap();
+        for (int i = 0; i <= 10; i++) {
+            GiftFactory factory = createRandomFactory();
+            factory.create().unWrap();
+        }
 
-        factory = new BdayGiftFactory();
+        /*factory = new BdayGiftFactory();
         factory.create().unWrap();
 
         //static method factory in case of a new gift type ==> new subclass
@@ -26,7 +30,13 @@ public class Client {
         gift.unWrap();
 
         // enum (singleton)
-        GiftType.normal.getGift().unWrap();
+        GiftType.normal.getGift().unWrap();*/
+    }
+
+    public static GiftFactory createRandomFactory() {
+        Random random = new Random();
+        boolean nextBoolean = random.nextBoolean();
+        return nextBoolean ? new XmasGiftFactory() : new BdayGiftFactory();
     }
 
 }
