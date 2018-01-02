@@ -6,4 +6,9 @@ public class XmasGift extends Gift {
     public void unWrap() {
         System.out.println("I'm a X-mas gift");
     }
+
+    @Override
+    public void price() {
+        System.out.println("I'm a 25 euro");
+    }
 }

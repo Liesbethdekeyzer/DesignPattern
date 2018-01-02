@@ -6,6 +6,10 @@ public class Gift {
         System.out.println("I'm a generic gift");
     }
 
+    public void price(){
+        System.out.println("I'm free");
+    }
+
 
 
 }

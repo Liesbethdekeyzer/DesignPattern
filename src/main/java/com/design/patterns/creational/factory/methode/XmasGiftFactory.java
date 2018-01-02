@@ -2,12 +2,8 @@ package com.design.patterns.creational.factory.methode;
 
 public class XmasGiftFactory extends GiftFactory{
 
-    public static Gift createStatic() {
-        return new XmasGift();
-    }
-
     @Override
-    public Gift create() {
+    public Gift createGift() {
         return new XmasGift();
     }
 }
