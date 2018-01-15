@@ -1,6 +1,6 @@
 package com.design.patterns.creational.factory.methode;
 
-public class BdayGiftFactory extends GiftFactory {
+public class BdayGiftStore extends GiftStore {
 
     @Override
     public Gift createGift() {

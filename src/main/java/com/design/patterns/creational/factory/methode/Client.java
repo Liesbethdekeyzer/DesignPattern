@@ -3,19 +3,19 @@ package com.design.patterns.creational.factory.methode;
 public class Client {
 
     public static void main(String[] args) {
-     GiftFactory giftFactory = initialize(GiftType.Xmas);
+     GiftStore giftFactory = initialize(GiftType.Xmas);
      Gift gift = giftFactory.buy();
      gift.unWrap();
     }
 
-    public static GiftFactory initialize(GiftType type) {
+    public static GiftStore initialize(GiftType type) {
         switch (type) {
             case Xmas:
-                return new XmasGiftFactory();
+                return new XmasGiftStore();
             case Bday:
-                return new BdayGiftFactory();
+                return new BdayGiftStore();
             default:
-                return new BdayGiftFactory();
+                return new BdayGiftStore();
         }
     }
 
