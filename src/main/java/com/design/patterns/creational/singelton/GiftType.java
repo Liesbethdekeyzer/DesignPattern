@@ -1,8 +1,8 @@
 package com.design.patterns.creational.singelton;
 
-import com.design.patterns.creational.factory.methode.BdayGift;
-import com.design.patterns.creational.factory.methode.Gift;
-import com.design.patterns.creational.factory.methode.XmasGift;
+import com.design.patterns.creational.methodefactory.BdayGift;
+import com.design.patterns.creational.methodefactory.Gift;
+import com.design.patterns.creational.methodefactory.XmasGift;
 
 public enum GiftType {
     Xmas(new XmasGift()), Bday(new BdayGift()), normal(new Gift());

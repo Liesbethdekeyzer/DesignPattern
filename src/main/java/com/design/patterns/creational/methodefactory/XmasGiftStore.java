@@ -1,4 +1,4 @@
-package com.design.patterns.creational.factory.methode;
+package com.design.patterns.creational.methodefactory;
 
 public class XmasGiftStore extends GiftStore {
 
